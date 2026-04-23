@@ -2,6 +2,7 @@
 # 2048 Game is a classic puzzle game implemented in JavaScript, HTML, and SCSS
 
 ## Project overview
+a classic puzzle game implemented in JavaScript, HTML, and SCSS
 - [DEMO LINK](https://zhyliaieva.github.io/js-2048-game)
 - [Code](https://github.com/zhyliaieva/js-2048-game)
 

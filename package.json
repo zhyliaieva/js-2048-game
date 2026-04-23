@@ -9,7 +9,7 @@
     "test:only": "mate-scripts test",
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
-    "build": "parcel build /docs/index.html --public-url ./",
+    "build": "parcel build docs/index.html --public-url ./",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
@@ -27,6 +27,7 @@
     "eslint-plugin-node": "^11.1.0",
     "parcel": "^2.12.0",
     "prettier": "^3.3.2",
+    "sass": "^1.99.0",
     "stylelint": "^16.7.0",
     "stylelint-scss": "^6.4.1"
   },

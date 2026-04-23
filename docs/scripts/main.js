@@ -1,5 +1,6 @@
 'use strict';
-import "../styles/main.scss";
+import  '../../src/styles/main.css';
+
 import Game from '../modules/Game.class.js';
 
 const BOARD_SIZE = 4; // Size of the game board

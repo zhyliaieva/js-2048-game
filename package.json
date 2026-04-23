@@ -7,9 +7,9 @@
     "start": "mate-scripts start",
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
-    "build": "mate-scripts build",
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
+    "build": "parcel build docs/index.html --public-url ./",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },

@@ -23,11 +23,12 @@
     "@mate-academy/scripts": "^2.1.3",
     "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
+    "build": "parcel build docs/index.html --public-url ./",
     "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
-    "build": "parcel build docs/index.html --public-url ./",
     "parcel": "^2.12.0",
     "prettier": "^3.3.2",
+    "sass": "^1.99.0",
     "stylelint": "^16.7.0",
     "stylelint-scss": "^6.4.1"
   },

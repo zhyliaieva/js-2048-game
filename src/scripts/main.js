@@ -1,4 +1,6 @@
+/* eslint-disable prettier/prettier */
 'use strict';
+import  '../../src/styles/main.css';
 
 import Game from '../modules/Game.class.js';
 
@@ -46,19 +48,13 @@ document.addEventListener('keydown', (e) => {
     return;
   }
 
+  const oldState = JSON.parse(JSON.stringify(game.getState()));
+
   switch (e.key) {
-    case 'ArrowLeft':
-      game.moveLeft();
-      break;
-    case 'ArrowRight':
-      game.moveRight();
-      break;
-    case 'ArrowUp':
-      game.moveUp();
-      break;
-    case 'ArrowDown':
-      game.moveDown();
-      break;
+    case 'ArrowLeft': game.moveLeft(); break;
+    case 'ArrowRight': game.moveRight(); break;
+    case 'ArrowUp': game.moveUp(); break;
+    case 'ArrowDown': game.moveDown(); break;
   }
 
   if (game.status === 'win') {
@@ -73,11 +69,11 @@ document.addEventListener('keydown', (e) => {
     buttonStart.remove();
     controls.append(buttonRestart);
   }
-
-  board();
+  board(oldState);
 });
 
-const board = () => {
+
+const board = (oldState) => {
   gameScore.textContent = game.getScore();
 
   const rows = [...tbody.querySelectorAll('.field-row')];
@@ -85,16 +81,21 @@ const board = () => {
   for (let i = 0; i < BOARD_SIZE; i++) {
     for (let j = 0; j < BOARD_SIZE; j++) {
       const cells = [...rows[i].querySelectorAll('.field-cell')];
+      const cellValue = game.getState()[i][j];
 
-      if (game.getState()[i][j] === 0) {
-        cells[j].textContent = null;
+      if (cellValue === 0) {
+        cells[j].textContent = '';
         cells[j].className = 'field-cell';
-      }
+      } else {
+        cells[j].textContent = cellValue;
+        cells[j].className = 'field-cell';
+        cells[j].classList.add('field-cell--' + cellValue);
 
-      if (game.getState()[i][j] !== 0) {
-        cells[j].textContent = game.getState()[i][j];
-        cells[j].className = 'field-cell';
-        cells[j].classList.add('field-cell--' + game.getState()[i][j]);
+        if (oldState && cellValue === oldState[i][j] * 2) {
+          cells[j].classList.add('tile-merged');
+
+          setTimeout(() => cells[j].classList.remove('tile-merged'), 200);
+        }
       }
     }
   }

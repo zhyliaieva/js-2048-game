@@ -29,6 +29,7 @@ a classic puzzle game implemented in JavaScript, HTML, and SCSS
 - The score is automatically calculated as you combine tiles.
 - You can restart the game at any time.
 - Responsive design for different screen sizes.
+- Animation
 
 ## Using technologies
 - `JavaScript`

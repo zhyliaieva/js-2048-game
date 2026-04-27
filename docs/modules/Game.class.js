@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * This class represents the game.
@@ -33,18 +33,18 @@ export default class Game {
     this.state = [...this.initialState];
     this.size = 4; // The size of the board (4x4)
     this.lastGameScore = 2048; // The score to win the game
-    this.status = 'idle';
+    this.status = "idle";
   }
 
   start() {
-    this.status = 'playing';
+    this.status = "playing";
 
     this.addCell();
     this.addCell();
   }
 
   restart() {
-    this.status = 'idle';
+    this.status = "idle";
 
     this.state = [
       [0, 0, 0, 0],
@@ -196,7 +196,7 @@ export default class Game {
     for (let i = 0; i <= this.size - 1; i++) {
       for (let n = 0; n <= this.size - 1; n++) {
         if (this.state[i][n] === this.lastGameScore) {
-          this.status = 'win';
+          this.status = "win";
         }
       }
     }
@@ -218,8 +218,6 @@ export default class Game {
       }
     }
 
-    this.status = 'lose';
+    this.status = "lose";
   }
 }
-
-

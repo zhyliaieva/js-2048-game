@@ -1,57 +1,77 @@
-<!DOCTYPE html><html lang=en><link rel=stylesheet href=docs.e63e5dbe.css><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>2048</title><link rel=icon href=favicon.4a32b748.png type=image/png><body>
-    <div class=container>
-      <div class=game-header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>2048</title>
+    <link
+      rel="stylesheet"
+      href="./styles/main.scss"
+    />
+    <link
+      rel="icon"
+      href="images/favicon.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-header">
         <h1>2048</h1>
-        <div class=controls>
-          <p class=info>
+        <div class="controls">
+          <p class="info">
             Score:
-            <span class=game-score>0</span>
+            <span class="game-score">0</span>
           </p>
           <button class="button start">Start</button>
         </div>
       </div>
 
-      <table class=game-field>
+      <table class="game-field">
         <tbody>
-          <tr class=field-row>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
           </tr>
 
-          <tr class=field-row>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
           </tr>
 
-          <tr class=field-row>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
           </tr>
 
-          <tr class=field-row>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
-            <td class=field-cell></td>
+          <tr class="field-row">
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
+            <td class="field-cell"></td>
           </tr>
         </tbody>
       </table>
 
-      <div class=message-container>
-        <p class="hidden message message-lose">You lose! Restart the game?</p>
-        <p class="hidden message message-win">Winner! Congrats! You did it!</p>
+      <div class="message-container">
+        <p class="message message-lose hidden">You lose! Restart the game?</p>
+        <p class="message message-win hidden">Winner! Congrats! You did it!</p>
         <p class="message message-start">
           Press "Start" to begin game. Good luck!
         </p>
       </div>
     </div>
-    <script src=docs.cfd022ce.js nomodule defer></script><script type=module src=docs.9f79940a.js></script>
+    <div class="footer"> </div>
+    <script type="module" src="./scripts/main.js"></script>
 
-  
-
+  </body>
+</html>
